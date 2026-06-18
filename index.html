@@ -159,6 +159,21 @@
   .stat .lab{margin-top:14px;font-size:14.5px;color:var(--meta);letter-spacing:.01em}
   .proof-lead{font-family:var(--display);font-size:clamp(22px,3vw,30px);line-height:1.3;max-width:30ch;margin-bottom:34px}
 
+  /* ---- experience timeline ---- */
+  .exp-intro{font-family:var(--display);font-size:clamp(21px,2.6vw,27px);line-height:1.36;max-width:44ch;color:var(--ink);margin-bottom:48px}
+  .timeline{position:relative;list-style:none;margin:0;padding:0}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:10px;width:2px;background:var(--line)}
+  .tl{position:relative;padding:0 0 34px 40px}
+  .tl:last-child{padding-bottom:0}
+  .tl::before{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border-radius:50%;border:2px solid var(--terra);background:var(--sand);box-sizing:border-box}
+  .tl.current::before{background:var(--terra-deep);border-color:var(--terra-deep)}
+  .tl-dates{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--terra-deep);margin-bottom:9px}
+  .tl-co{font-family:var(--display);font-weight:470;font-size:22px;color:var(--ink);line-height:1.2;margin-bottom:4px}
+  .tl-co-sub{font-weight:400;font-size:15px;color:var(--meta)}
+  .tl-role{font-family:var(--body);font-weight:500;font-size:15.5px;color:var(--ink);margin-bottom:9px}
+  .tl-desc{font-family:var(--body);font-size:16px;color:var(--meta);max-width:60ch;line-height:1.56;margin:0}
+  .tl-desc b{font-weight:500;color:var(--ink);font-style:normal}
+
   /* ---- reversed credo band ---- */
   .band{background:var(--ink);color:var(--paper);text-align:center;padding:96px 0;border:0}
   .band .tanrule{width:54px;height:1px;background:var(--terra);margin:0 auto 30px}
@@ -218,6 +233,7 @@
       <a href="#about">About</a>
       <a href="#services">What I Do</a>
       <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
       <a class="navcta" href="#contact">Let&rsquo;s talk</a>
     </nav>
   </div>
@@ -307,14 +323,54 @@
         <span class="chip verified">The Art of Shaving</span>
         <span class="chip verified">Intuit</span>
       </div>
-      <p class="work-note">Through agency roles I&rsquo;ve also strategized influencer campaigns for brands like Netflix, Disney, and Amazon. Full client list and case studies available on request.</p>
+      <p class="work-note">Full client list and campaign case studies available on request.</p>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" data-reveal>
+    <div class="wrap">
+      <div class="kicker"><span class="num">04</span><h2>Experience</h2></div>
+      <p class="exp-intro">The truth is I&rsquo;m always working on someone&rsquo;s brand. I just stopped working so hard on my own. Here&rsquo;s where the work has lived.</p>
+      <ol class="timeline">
+        <li class="tl current">
+          <span class="tl-dates">May 2017 to Present</span>
+          <h3 class="tl-co">SB Clark Marketing <span class="tl-co-sub">(On The Internet LLC)</span></h3>
+          <p class="tl-role">Social Media &amp; Influencer Marketing Consultant</p>
+          <p class="tl-desc">I build social strategy for new businesses, audit and rework it for established ones, and run influencer campaigns end to end against real KPIs.</p>
+        </li>
+        <li class="tl current">
+          <span class="tl-dates">Jan 2014 to Present</span>
+          <h3 class="tl-co">saraovershares</h3>
+          <p class="tl-role">Content Creator</p>
+          <p class="tl-desc">My own creator brand in beauty, fashion, and lifestyle, and where most of my brand collaborations have come from.</p>
+        </li>
+        <li class="tl">
+          <span class="tl-dates">Jul 2023 to Jan 2024, Remote</span>
+          <h3 class="tl-co">Influential</h3>
+          <p class="tl-role">Specialist, Creator Partnerships</p>
+          <p class="tl-desc">I sourced and positioned top-tier talent for campaigns with <b>Amazon</b>, <b>McDonald&rsquo;s</b>, and other Fortune 500 brands, using the data to make the match make sense.</p>
+        </li>
+        <li class="tl">
+          <span class="tl-dates">Oct 2021 to Jun 2022</span>
+          <h3 class="tl-co">pearpop</h3>
+          <p class="tl-role">Creative Strategist</p>
+          <p class="tl-desc">I wrote creator-facing concepts and briefs in each brand&rsquo;s own voice for <b>Netflix</b>, <b>Disney</b>, <b>Universal</b>, <b>Chipotle</b>, <b>Headspace</b>, and more, and built the authenticity check that stopped six figures a year in fraudulent payouts.</p>
+        </li>
+        <li class="tl">
+          <span class="tl-dates">Sep 2017 to Dec 2019, Los Angeles</span>
+          <h3 class="tl-co">Tinysponsor</h3>
+          <p class="tl-role">Creator Relations</p>
+          <p class="tl-desc">I ran a wide network of creators, hand-vetted every one for authenticity, and stood in the middle as the translator between them and the brands.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- ============ PROOF / STATS ============ -->
   <section id="proof" data-reveal>
     <div class="wrap">
-      <div class="kicker"><span class="num">04</span><h2>A Bit of Proof</h2></div>
+      <div class="kicker"><span class="num">05</span><h2>A Bit of Proof</h2></div>
       <p class="proof-lead">I&rsquo;ve been studying internet communities, and building inside them, since 2014.</p>
       <div class="stats">
         <div class="stat">
@@ -340,7 +396,7 @@
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="contact" data-reveal>
     <div class="wrap">
-      <div class="kicker"><span class="num">05</span><h2>Contact</h2></div>
+      <div class="kicker"><span class="num">06</span><h2>Contact</h2></div>
       <p class="lede">Let&rsquo;s talk about your people.</p>
       <p class="sub">Tell me what you&rsquo;re building and what you want it to do. I read everything.</p>
       <a class="email" href="mailto:hello@saraovershares.com">hello@saraovershares.com</a>
