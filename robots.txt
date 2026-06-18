@@ -1,0 +1,4 @@
+# PREVIEW GATE — keep this Disallow in place until go-live (after Sara's sign-off).
+# At launch, replace with "Allow: /" and add a sitemap line.
+User-agent: *
+Disallow: /
