@@ -24,7 +24,12 @@
     - Every brand name except IPSY     (get Sara's approved + permissioned list).
     - Any specific job title / employer (vault says she is currently between roles —
       nothing present-tense ships without her word).
-    - Testimonial quote, portrait photo, LinkedIn URL, exact contact email.
+    - Testimonial quote, LinkedIn URL, exact contact email.
+
+  PHOTOS: Sara's real shots placed 2026-06-18 (3 supplied by Patrick). In use:
+    hero = sara-portrait (B0005763), About = sara-tuscany (H41A8102). Held in
+    reserve: sara-florence (H41A8331, gelato candid) — available to drop in.
+    All re-encoded (jpg+webp), EXIF/GPS stripped, self-hosted in img/.
 
   CONTACT shown = saraontheinternet@gmail.com (Patrick-provided, definitely hers).
   Swap to hello@saraovershares.com if Sara prefers the current-brand address.
@@ -96,14 +101,19 @@
   @media(max-width:720px){nav.primary a:not(.navcta){display:none}}
 
   /* ---- hero ---- */
-  .hero{padding:96px 0 84px;position:relative;overflow:hidden}
+  .hero{padding:80px 0 76px;position:relative;overflow:hidden}
   .hero .wrap{position:relative;z-index:1}
-  .hero h1{font-size:clamp(40px,7.4vw,86px);font-weight:430;font-variation-settings:"opsz" 144;margin:22px 0 0;max-width:16ch}
+  .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:58px;align-items:center}
+  .hero-copy{min-width:0}
+  .hero h1{font-size:clamp(40px,6.2vw,80px);font-weight:430;font-variation-settings:"opsz" 144;margin:20px 0 0;max-width:15ch}
   .hero h1 em{font-style:italic;color:var(--terra-deep)}
-  .hero .standfirst{font-size:clamp(18px,2.3vw,22px);color:var(--meta);max-width:54ch;margin:28px 0 0;line-height:1.55}
-  .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
-  .hero .blob{position:absolute;right:-120px;top:-80px;width:520px;height:520px;border-radius:50%;
-    background:radial-gradient(circle at 30% 30%,var(--sand),transparent 70%);opacity:.6;z-index:0;pointer-events:none}
+  .hero .standfirst{font-size:clamp(18px,2.3vw,21px);color:var(--meta);max-width:50ch;margin:26px 0 0;line-height:1.55}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+  .hero-figure{position:relative}
+  .hero-figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;
+    border-radius:12px;border:1px solid var(--line);box-shadow:0 30px 70px -32px rgba(46,42,38,.55)}
+  .hero .blob{position:absolute;right:-140px;top:-90px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%,var(--sand),transparent 70%);opacity:.55;z-index:0;pointer-events:none}
 
   /* ---- section scaffold ---- */
   section{padding:88px 0;border-top:1px solid var(--line)}
@@ -115,10 +125,9 @@
 
   /* ---- about ---- */
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
-  .portrait{aspect-ratio:4/5;background:linear-gradient(150deg,var(--sand),var(--paper2));border:1px solid var(--line);
-    border-radius:8px;display:flex;align-items:center;justify-content:center;position:relative}
-  .portrait .mono{font-family:var(--display);font-size:84px;color:var(--terra);opacity:.32}
-  .portrait .tag{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--meta)}
+  .portrait{aspect-ratio:2/3;background:var(--paper2);border:1px solid var(--line);
+    border-radius:10px;overflow:hidden;margin:0;box-shadow:0 24px 56px -34px rgba(46,42,38,.5)}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
   .about-prose p{font-size:18.5px;max-width:60ch}
   .about-prose p+p{margin-top:1.15em}
   .about-prose .open{font-family:var(--display);font-size:clamp(22px,2.8vw,28px);line-height:1.32;color:var(--ink);margin-bottom:1em;max-width:34ch}
@@ -180,8 +189,10 @@
 
   /* ---- responsive ---- */
   @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .hero-figure{max-width:360px;order:-1}
     .about-grid{grid-template-columns:1fr;gap:34px}
-    .portrait{max-width:340px}
+    .portrait{max-width:360px}
     .services{grid-template-columns:1fr}
     .svc:not(:first-child){border-left:0;border-top:1px solid var(--line)}
     .stats{grid-template-columns:1fr}
@@ -213,13 +224,21 @@
   <!-- ============ HERO ============ -->
   <div class="hero" id="top">
     <div class="blob" role="presentation"></div>
-    <div class="wrap">
-      <p class="eyebrow">Social &amp; Influence Marketing &nbsp;·&nbsp; Virginia Beach</p>
-      <h1>I build audiences, and I&rsquo;ve built them <em>for brands</em> too.</h1>
-      <p class="standfirst">I spent years growing my own following from inside the feed, then took everything I learned to the brand side. I make content people actually want to watch, and strategy that still works after the post goes quiet.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact">Work with me</a>
-        <a class="btn btn-ghost" href="#services">See what I do</a>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Social &amp; Influence Marketing &nbsp;·&nbsp; Virginia Beach</p>
+        <h1>I build audiences, and I&rsquo;ve built them <em>for brands</em> too.</h1>
+        <p class="standfirst">I spent years growing my own following from inside the feed, then took everything I learned to the brand side. I make content people actually want to watch, and strategy that still works after the post goes quiet.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Work with me</a>
+          <a class="btn btn-ghost" href="#services">See what I do</a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <picture>
+          <source srcset="img/sara-portrait.webp" type="image/webp">
+          <img src="img/sara-portrait.jpg" width="900" height="1125" alt="Sara Clark, social and influence marketer" fetchpriority="high">
+        </picture>
       </div>
     </div>
   </div>
@@ -229,10 +248,12 @@
     <div class="wrap">
       <div class="kicker"><span class="num">01</span><h2>About</h2></div>
       <div class="about-grid">
-        <div class="portrait">
-          <span class="mono" aria-hidden="true">SC</span>
-          <span class="tag"><span class="ph">add Sara&rsquo;s photo</span></span>
-        </div>
+        <figure class="portrait">
+          <picture>
+            <source srcset="img/sara-tuscany.webp" type="image/webp">
+            <img src="img/sara-tuscany.jpg" width="860" height="1289" alt="Sara Clark" loading="lazy">
+          </picture>
+        </figure>
         <div class="about-prose">
           <p class="open">I started as a creator, then learned to do it for everyone else.</p>
           <p>I grew my own accounts to a real audience and learned, in real time and in public, how attention actually moves online. I figured out what makes someone stop scrolling, stay, and come back.</p>
